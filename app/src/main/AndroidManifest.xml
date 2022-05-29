@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.isafe">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ISafe">
+        <activity
+            android:name=".dashboard.EmpowermentModule"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.videocall.VcMaleHindi"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.videocall.FakeCallModule"
+            android:exported="false" />
+
+        <service android:name="com.android.mms.transaction.TransactionService" />
+
+        <activity
+            android:name=".dashboard.TransportModule"
+            android:exported="false" />
+        <activity
+            android:name=".loginModule.VerifyOtp"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.SosModule"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.AboutUsModule"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.AlertSirenModule"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.ContactsModule"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.AppDashboard"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".greetUser.MainActivity"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".greetUser.MainActivity2"
+            android:exported="true" >
+
+
+        </activity>
+        <activity
+            android:name=".login"
+            android:exported="true" />
+
+        <receiver android:name=".AppWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info" />
+        </receiver>
+
+    </application>
+
+</manifest>

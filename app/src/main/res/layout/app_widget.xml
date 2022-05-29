@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/widget_background"
+    android:id="@+id/parent_widget">
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/widgetSosIb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press this SOS button when in need!👉👉"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"/>
+
+    <ImageButton
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sos_image"
+        android:layout_weight="0"/>
+
+</LinearLayout>

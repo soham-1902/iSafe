@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginModule.VerifyOtp"
+    android:orientation="vertical"
+    android:background="#000">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/isafe"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/otpEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:background="@color/purple_700"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <Button
+        android:id="@+id/verifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Sign Up"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:lines="2"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white"
+        android:text="If possible, We will automatically validate your OTP for you"/>
+
+</LinearLayout>

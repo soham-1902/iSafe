@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">iSafe</string>
+    <string name="navigation_open">"Open Navigation Drawer"</string>
+    <string name="navigation_close">"Close Navigation Drawer"</string>
+
+    <string-array name="text">
+    <item>An App By</item>
+    <item>PandP Codes</item>
+    </string-array>
+
+
+    <string name="about_us_text"><font size="30">What is iSafe?😁\n\n</font>iSafe is a social organisation working with a wide range of urban stakeholders to make public spaces safer and more inclusive for women. We also generate a safety score based on the data we collect and provide it in the iSafe app for users to make safe and informed decisions about their mobility.
+    \n\n<font size="30">Our Vision😇\n\n</font>To provide credible data and build vibrant ecosystems for safe, inclusive and accesible cities.
+    \n\n<font size="30">Origins🙌\n\n</font>At iSafe, we believe that cities must be made safer and more inclusive for women and everyone. iSafe is a tool that works to enable cities to become safer through collection of data through crowdsourcing and other methods. The Safety Audit, that forms the core of iSafe, assesses different parameters linked to safer and more inclusive public spaces. We were fortunate to have an exceptional advisory board that provided us with comments, experience and ideas to make the Safety Audit rubric a strong and precise tool. We also believe that quantification will help in creating more safety. Having a score for an area provides a simple way to measure improvements.
+    \n\n<font size="30">Choice of Name👑\n\n</font>So why iSafe? A few reasons.<br />
+1. The most obvious is that the iSafe mobile safety app shows a safety audit score as a “pin” on a map.<br />
+2. The safety pin is a symbol of something that holds fabric together – stops it from coming apart. Our hope is that our iSafe plays that role – brings together the fabric of our society.
+     \n\n<font size="30">🥰In the end, you are all we care about, because Your Safety Is Our First Priority🥰</font></string>
+</resources>

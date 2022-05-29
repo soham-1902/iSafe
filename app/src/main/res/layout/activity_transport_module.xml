@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.TransportModule"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout"
+    android:background="#000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTransport"
+        app:navigationIcon="@drawable/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Transport"
+        app:titleMarginStart="97dp"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Fill Your Travelling Details"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:background="@color/white"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:id="@+id/aboutUsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingStart="6dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="I am travelling by"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/vehicleRg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Public Bus"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Private Bus"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxi"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rickshaw"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lift"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/locationCb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Include my current location"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:checked="true"
+                android:textSize="20dp"
+                android:background="@color/white"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/cameraIb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_with_border"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/transport_camera" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_with_border">
+
+                    <ImageView
+                        android:id="@+id/displayIv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_no_svgrepo_com" />
+
+                    <TextView
+                        android:id="@+id/noImageTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="No Image uploaded (optional)"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sendMessageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:textSize="20dp"
+                android:text="Send Message"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
