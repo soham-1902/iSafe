@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="@drawable/splash_background"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".login">
@@ -34,10 +34,10 @@
 
     <com.google.android.material.textfield.TextInputEditText
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:id="@+id/etUsername"
+        android:id="@+id/etPhoneLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username or Email"
+        android:hint="Phone number"
         android:inputType="text"
         android:background="@color/purple_700"
         android:layout_marginTop="20dp"
@@ -54,7 +54,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:id="@+id/etPassword"
+            android:id="@+id/etPasswordLLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"

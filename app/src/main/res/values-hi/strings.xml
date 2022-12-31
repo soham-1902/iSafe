@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">iSafe</string>
     <string name="navigation_open">"Open Navigation Drawer"</string>
@@ -19,20 +20,20 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
-    <string name="where_women_are_honoured">Where women are honoured there the gods delight, where they are not honoured there all acts become fruitless.\n- Manusmriti</string>
-    <string name="about_us">About Us</string>
-    <string name="educate">Educate</string>
-    <string name="fake_call">Fake Call</string>
-    <string name="contacts">Contacts</string>
-    <string name="transport">Transport</string>
-    <string name="sos">SOS</string>
-    <string name="home">Home</string>
+    <string name="where_women_are_honoured">जहां नारी का सम्मान होता है वहां देवता प्रसन्न होते हैं, जहां उनका सम्मान नहीं होता वहां सभी कार्य निष्फल हो जाते हैं। \n- मनुस्मृति</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="educate">शिक्षा</string>
+    <string name="fake_call">फर्जी कॉल</string>
+    <string name="contacts">संपर्क</string>
+    <string name="transport">यातायात</string>
+    <string name="sos">आपातकालीन</string>
+    <string name="home">घर</string>
     <string name="authentication">Authentication</string>
-    <string name="logout">Logout</string>
-    <string name="change_language">Change Language</string>
-    <string name="english">English</string>
-    <string name="hindi">Hindi</string>
-    <string name="marathi">Marathi</string>
-    <string name="sharing">Sharing</string>
-    <string name="share">Share</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="change_language">भाषा बदलो</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="marathi">मराठी</string>
+    <string name="sharing">शेयरिंग</string>
+    <string name="share">शेयर</string>
 </resources>

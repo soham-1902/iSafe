@@ -21,24 +21,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bypnpTv = findViewById(R.id.bypnpTv);
+        //bypnpTv = findViewById(R.id.bypnpTv);
 
-
-        runAnimation();
+        //bypnpTv.setSelected(true);
+        //runAnimation();
 
         new Handler().postDelayed(() -> {
-
-
             Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
             startActivity(intent);
             finish();
 
-        }, 2_000);
+        }, 1_100);
     }
 
     private void runAnimation() {
-        Animation a = AnimationUtils.loadAnimation(this, R.anim.tv_animation);
-        bypnpTv.startAnimation(a);
+        //Animation a = AnimationUtils.loadAnimation(this, R.anim.tv_animation);
+        //bypnpTv.startAnimation(a);
+
     }
 
 }

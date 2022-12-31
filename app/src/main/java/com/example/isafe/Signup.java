@@ -39,9 +39,7 @@ public class Signup extends AppCompatActivity {
         reviewTv = findViewById(R.id.reviewTv);
         contactNumber = findViewById(R.id.contactNumber);
         ccp = findViewById(R.id.ccp);
-
-
-
+        
         ccp.registerCarrierNumberEditText(contactNumber);
 
         getOtp.setOnClickListener(v -> {

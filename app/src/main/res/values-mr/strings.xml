@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">iSafe</string>
     <string name="navigation_open">"Open Navigation Drawer"</string>
@@ -19,20 +20,20 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
-    <string name="where_women_are_honoured">Where women are honoured there the gods delight, where they are not honoured there all acts become fruitless.\n- Manusmriti</string>
-    <string name="about_us">About Us</string>
-    <string name="educate">Educate</string>
-    <string name="fake_call">Fake Call</string>
-    <string name="contacts">Contacts</string>
-    <string name="transport">Transport</string>
-    <string name="sos">SOS</string>
-    <string name="home">Home</string>
-    <string name="authentication">Authentication</string>
-    <string name="logout">Logout</string>
-    <string name="change_language">Change Language</string>
-    <string name="english">English</string>
-    <string name="hindi">Hindi</string>
-    <string name="marathi">Marathi</string>
-    <string name="sharing">Sharing</string>
-    <string name="share">Share</string>
+    <string name="where_women_are_honoured">जेथे स्त्रियांचा सन्मान होतो तेथे देवांना आनंद होतो, जेथे त्यांचा सन्मान होत नाही तेथे सर्व कर्म निष्फळ होतात.\n - मनुस्मृती</string>
+    <string name="about_us">आमच्याबद्दल</string>
+    <string name="educate">शिक्षण</string>
+    <string name="fake_call">बनावट कॉल</string>
+    <string name="contacts">संपर्क</string>
+    <string name="transport">" वाहतूक"</string>
+    <string name="sos">आणीबाणी</string>
+    <string name="home">मुख्यपृष्ठ</string>
+    <string name="authentication">प्रमाणीकरण</string>
+    <string name="logout">बाहेर पडणे</string>
+    <string name="change_language">भाषा बदला</string>
+    <string name="english">इंग्रजी</string>
+    <string name="hindi">हिंदी</string>
+    <string name="marathi">मराठी</string>
+    <string name="sharing">शेअरिंग</string>
+    <string name="share">शेअर करा</string>
 </resources>

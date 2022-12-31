@@ -7,30 +7,52 @@
         <item
             android:id="@+id/homeNav"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Home" />
+            android:title="@string/home" />
 
     </group>
 
     <group android:checkableBehavior="single">
         <item
-            android:title="Authentication" >
+            android:title="@string/authentication" >
             <menu>
                 <item
                     android:id="@+id/logoutNav"
                     android:icon="@drawable/ic_logout_svgrepo_com"
-                    android:title="Logout" />
+                    android:title="@string/logout" />
             </menu>
         </item>
     </group>
 
     <group android:checkableBehavior="single">
         <item
-            android:title="Sharing" >
+            android:title="@string/change_language">
+            <menu>
+                <item
+                    android:id="@+id/eng"
+                    android:icon="@drawable/ic_baseline_language_24"
+                    android:title="@string/english" />
+
+                <item
+                    android:id="@+id/hin"
+                    android:icon="@drawable/ic_baseline_language_24"
+                    android:title="@string/hindi" />
+
+                <item
+                    android:id="@+id/mar"
+                    android:icon="@drawable/ic_baseline_language_24"
+                    android:title="@string/marathi" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/sharing" >
             <menu>
                 <item
                     android:id="@+id/shareNav"
                     android:icon="@drawable/ic_baseline_share_24"
-                    android:title="Share" />
+                    android:title="@string/share" />
             </menu>
         </item>
     </group>

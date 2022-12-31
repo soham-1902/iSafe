@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.Activity;
@@ -40,6 +41,7 @@ import com.klinker.android.send_message.Transaction;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.util.List;
 
 public class TransportModule extends AppCompatActivity {
 
@@ -99,10 +101,23 @@ public class TransportModule extends AppCompatActivity {
         });
 
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         locationListener = location -> {
             lat = location.getLatitude();
             lng = location.getLongitude();
         };
+
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+
 
         sendMessageBtn.setOnClickListener(v -> {
             vehicleRb = findViewById(vehicleRg.getCheckedRadioButtonId());
@@ -121,9 +136,12 @@ public class TransportModule extends AppCompatActivity {
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                         return;
                     }
-                    Location lastKnown = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                    /*Location lastKnown = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
                     lat = lastKnown.getLatitude();
-                    lng = lastKnown.getLongitude();
+                    lng = lastKnown.getLongitude();*/
+                    lat = getLastKnownLocation().getLatitude();
+                    lng = getLastKnownLocation().getLongitude();
                }
                whatsappMessage.append("\nMy current location is ").append("https://www.google.com/maps/search/?api=1&query=").append(lat).append(",").append(lng);
            }
@@ -207,5 +225,23 @@ public class TransportModule extends AppCompatActivity {
             }
         }
         return path;
+    }
+    private Location getLastKnownLocation() {
+        Location l=null;
+        LocationManager mLocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
+        List<String> providers = mLocationManager.getProviders(true);
+        Location bestLocation = null;
+        for (String provider : providers) {
+            if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED) {
+                l = mLocationManager.getLastKnownLocation(provider);
+            }
+            if (l == null) {
+                continue;
+            }
+            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
+                bestLocation = l;
+            }
+        }
+        return bestLocation;
     }
 }

@@ -64,7 +64,6 @@
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
@@ -100,7 +99,7 @@
                         android:layout_below="@id/sosIv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="2dp"
-                        android:text="SOS"
+                        android:text="@string/sos"
                         android:textSize="24sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -128,7 +127,7 @@
                         android:layout_below="@id/alertSirenIv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="2dp"
-                        android:text="Transport"
+                        android:text="@string/transport"
                         android:textSize="24sp" />
 
                     <ImageView
@@ -150,7 +149,6 @@
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -184,7 +182,7 @@
                         android:layout_below="@id/contactsIv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="2dp"
-                        android:text="Contacts"
+                        android:text="@string/contacts"
                         android:textSize="24sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -211,7 +209,7 @@
                         android:layout_below="@id/fakeCallIv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="2dp"
-                        android:text="Fake Call"
+                        android:text="@string/fake_call"
                         android:textSize="24sp" />
 
                     <ImageView
@@ -242,7 +240,10 @@
                 android:id="@+id/empowermentCv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 app:cardElevation="10dp"
                 app:cardCornerRadius="10dp"
@@ -259,7 +260,7 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="6dp"
                         app:srcCompat="@drawable/empowerment_img" />
 
                     <TextView
@@ -269,7 +270,7 @@
                         android:layout_below="@id/empowermentIv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="2dp"
-                        android:text="Educate"
+                        android:text="@string/educate"
                         android:textSize="24sp" />
 
                 </RelativeLayout>
@@ -279,12 +280,16 @@
                 android:id="@+id/aboutUsCV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="23dp"
                 android:layout_weight="1"
                 app:cardElevation="10dp"
                 app:cardCornerRadius="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true">
+                android:clickable="true"
+                android:focusable="true">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -297,7 +302,7 @@
                         android:layout_below="@id/aboutUsIv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="2dp"
-                        android:text="About Us"
+                        android:text="@string/about_us"
                         android:textSize="24sp" />
 
                     <ImageView
@@ -323,7 +328,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:textColor="@color/white"
-            android:text="Where women are honoured there the gods delight, where they are not honoured there all acts become fruitless.\n- Manusmriti"
+            android:text="@string/where_women_are_honoured"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

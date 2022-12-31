@@ -13,15 +13,20 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.isafe.R;
@@ -29,6 +34,8 @@ import com.example.isafe.dashboard.videocall.FakeCallModule;
 import com.example.isafe.greetUser.MainActivity2;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Locale;
 
 public class AppDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -43,11 +50,36 @@ public class AppDashboard extends AppCompatActivity implements NavigationView.On
     private float acelVal,acelLast,shake;
     private int counter;
 
+    private TextView sosTv, alertSirentv, contactstv, fakeCallTv, empowernmentTv, aboutUstv, tv2;
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+        /*sosTv.setText(R.string.sos);
+        alertSirentv.setText(R.string.transport);
+        contactstv.setText(R.string.contacts);
+        fakeCallTv.setText(R.string.fake_call);
+        empowernmentTv.setText(R.string.educate);
+        aboutUstv.setText(R.string.about_us);
+        tv2.setText(R.string.where_women_are_honoured);*/
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_dashboard);
         setNavigationViewListener();
+
+        sosTv = findViewById(R.id.sosTv);
+        alertSirentv = findViewById(R.id.alertSirenTv);
+        contactstv = findViewById(R.id.contactsTv);
+        fakeCallTv = findViewById(R.id.fakeCallTv);
+        empowernmentTv = findViewById(R.id.empowermentTv);
+        aboutUstv = findViewById(R.id.aboutUsTv);
+        tv2 = findViewById(R.id.textView2);
 
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
@@ -148,17 +180,42 @@ public class AppDashboard extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
             }
-            case R.id.homeNav: {
-
-            }
+            case R.id.homeNav:
             case R.id.shareNav: {
-
+                break;
             }
+
+            case R.id.eng: {
+                setLcale("en");
+                break;
+            }
+
+            case R.id.hin: {
+                setLcale("hi");
+                break;
+            }
+
+            case R.id.mar: {
+                setLcale("mr");
+                break;
+            }
+
         }
         //close navigation drawer
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void setLcale(String lang) {
+        Resources resources = getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = new Locale(lang);
+        resources.updateConfiguration(configuration, metrics);
+        onConfigurationChanged(configuration);
+    }
+
+
 
     private final SensorEventListener sensorListener = new SensorEventListener() {
         @Override

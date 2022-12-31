@@ -7,7 +7,7 @@
     tools:context=".dashboard.TransportModule"
     android:orientation="vertical"
     android:id="@+id/linearLayout"
-    android:background="#000">
+    android:background="@drawable/splash_background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarTransport"

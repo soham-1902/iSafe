@@ -88,6 +88,11 @@ public class SosModule extends AppCompatActivity {
             }
                 message = "Hello I am in danger! My current location is: " + "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lng;
                 if (!isSent) {
+                    if (numbers == null) {
+                        Toast.makeText(getApplicationContext(), "Please add a contact!", Toast.LENGTH_SHORT).show();
+                        mediaPlayer.stop();
+                        return;
+                    }
                     for (String num : numbers) {
                         sendSms(num);
                     }
@@ -159,6 +164,10 @@ public class SosModule extends AppCompatActivity {
     public String[] getNumbers() {
         DatabaseHelper databaseHelper = new DatabaseHelper(SosModule.this);
         List<ParticipantModel> all = databaseHelper.getAll();
+
+        if (all.isEmpty()) {
+            return null;
+        }
 
         String[] arr = new String[all.size()];
 

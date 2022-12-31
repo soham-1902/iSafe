@@ -2,11 +2,9 @@ package com.example.isafe;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
-import android.widget.Toast;
 
 import com.example.isafe.dashboard.SosModule;
 
@@ -19,10 +17,8 @@ public class AppWidgetProvider extends android.appwidget.AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        Toast.makeText(context, "Inside onUpdate", Toast.LENGTH_SHORT).show();
 
         for (int appWidgetId : appWidgetIds) {
-            Toast.makeText(context, "Inside onUpdate", Toast.LENGTH_SHORT).show();
 
             i = new Intent(WIDGET_BUTTON);
             i.setFlags (Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -38,7 +34,6 @@ public class AppWidgetProvider extends android.appwidget.AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO Auto-generated method stub
-        Toast.makeText(context, "Inside onReceive", Toast.LENGTH_SHORT).show();
         super.onReceive(context, intent);
         if (WIDGET_BUTTON.equals(intent.getAction())) {
             Intent intn = new Intent (context, SosModule.class);

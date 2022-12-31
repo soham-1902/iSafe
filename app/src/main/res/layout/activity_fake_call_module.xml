@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dashboard.videocall.FakeCallModule"
-    android:background="#FF9800"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/black">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarFakeCall"
@@ -19,48 +19,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Fake Call"
-        app:titleMarginStart="97dp"
+        app:title="Video call with Josh..."
+        app:titleMarginStart="55dp"
         app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/isafe"
-        android:background="@color/black" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/maleHindi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Video call with Male (Hindi)"/>
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Video call with Male (English)"/>
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom|end"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Video call with female (Hindi)"/>
+        <ImageButton
+            android:id="@+id/callCut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:background="@drawable/call_cut_oval"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="30dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Video call with female (English)"/>
+        <ImageButton
+            android:id="@+id/sosFromVc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:background="@drawable/oval_back_sos"
+            android:layout_marginStart="140dp"
+            android:layout_marginBottom="30dp"/>
+
+    </FrameLayout>
 
 </LinearLayout>
